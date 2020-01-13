@@ -64,7 +64,7 @@ class CleantalkRequest {
   */
 	constructor({data, options, aliases, request} = {}) {
 		if (request) {
-			assert(request instanceof IncomingMessage, 'Request argument must be instance of http.ClientRequest.');
+			assert(!(request instanceof IncomingMessage), 'Request argument must be instance of http.ClientRequest.');
 		}
 
 		data = data || {
